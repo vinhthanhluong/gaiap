@@ -1,0 +1,103 @@
+.pagination {
+	margin-top: 30px;
+	text-align: center;
+	&.black{
+		li{
+			.page-numbers{
+				&.current{
+					background-color: $bg-b-cl;
+				}
+				&:hover{
+					background-color: $bg-b-cl;
+				}
+			}
+
+			.pages{
+				&:hover{
+					color: $t-b-cl;
+					border-color: $b-cl;
+				}
+			}
+		}
+	}
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		font-family: 'Oswald';
+		font-weight: 500;
+		.page-numbers {
+			width: 44px;
+			height: 44px;
+			border-radius: 100%;
+			border: 1px solid transparent;
+			//color: $t-b-cl;
+			transition: all .3 ease;
+			@include lh(24, 14);
+			@include flex-mid;
+			&.current {
+				background-color: $main-cl;
+				color: $t-w-cl;
+				border: 1px solid transparent;
+			}
+			&:hover {
+				background-color: $main-cl;
+				color: $t-w-cl;
+				border: 1px solid transparent;
+			}
+			@include max-media($bk-576){
+				width: 38px;
+				height: 38px
+			}
+		}
+
+		.pages{
+			border: 1px solid $g-DDDD-cl;
+			@include fz-16;
+			text-transform: uppercase;
+			padding: 9px;
+			border-radius: 27px;
+			@include lh(24,16);
+			transition: all .3s ease;
+			@include max-media($bk-576){
+				font-size: 0;
+				width: 38px;
+				height: 38px;
+				@include flex-mid;
+				
+			}
+			&:hover{
+				color: $main-cl;
+				border-color: $main-cl;
+			}
+			.fa{
+				font-size: 20px;
+				transition: all .3s ease;
+			}
+		}
+
+		.page-prev{
+			margin-right: 18px;
+			@include max-media($bk-576){
+				margin-right: 5px;
+			}
+			.fa-angle-left{
+				margin-right: 10px;
+				@include max-media($bk-576){
+					margin-right: 0;
+				}
+			}
+		}
+		.page-next{
+			margin-left: 18px;
+			@include max-media($bk-576){
+				margin-left: 5px;
+			}
+			.fa-angle-right{
+				margin-left: 10px;
+				@include max-media($bk-576){
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

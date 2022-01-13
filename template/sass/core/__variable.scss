@@ -1,0 +1,78 @@
+//primary color
+$b-cl: #000000;
+$w-cl: #fff;
+$g-cl: #898989;
+// $dark-cl: #333;
+// $light-cl: #fff;
+
+
+
+
+//color-text
+$t-b-cl: $b-cl;
+$t-w-cl: $w-cl;
+$t-g-cl: $g-cl;
+
+
+//color-background
+$bg-b-cl: $b-cl;
+$bg-w-cl: $w-cl;
+$bg-g-cl: $g-cl;
+
+
+//color design
+$main-cl: #044518;
+$border-cl: #e1e1e1;
+$bg-ft-t:#E5ECE7;
+$g-7070-cl:#707070;
+$g-3333-cl:#333333;
+$g-F8F8-cl:#F8F8F8;
+$g-E5E5-cl:#E5E5E5;
+$g-E2E2-cl:#E2E2E2;
+$g-F2F2-cl:#F2F2F2;
+$g-DDDD-cl:#DDDDDD;
+$g-E0E0-cl:#E0E0E0;
+$g-D1D1-cl:#D1D1D1;
+$g-6060-cl:#606060;
+$r-cl:#E4271A;
+$fb-cl:#3B5998;
+$yt-cl:#EA412C;
+$r2-cl:#E80F0F;
+$r3-cl:#FA0606;
+
+//font-famili , font-size
+$fz-base: 10px;
+$font-body: 'SF Pro Display', sans-serif;
+$fz-body: 14px;
+$lh-body: 1.4;
+$cl-body: #000000;
+
+
+//break point
+$bk-1200: 1200px;
+$bk-1024: 1024px;
+$bk-992: 992px;
+$bk-900: 900px; 
+$bk-850: 850px;
+$bk-768: 768px;
+$bk-640: 640px;
+$bk-600: 600px;
+$bk-576: 576px;
+$bk-500: 500px;
+$bk-480: 480px;
+$bk-400: 400px;
+$bk-375: 375px;
+//break point - 1
+$bk-d-1200: $bk-1200 - 1;
+$bk-d-1024: $bk-1024 - 1;
+$bk-d-992: $bk-992 - 1;
+$bk-d-768: $bk-768 - 1;
+$bk-d-576: $bk-576 - 1;
+
+/*width*/
+$w-scroll: 0px;
+$max-width: 100%;
+$container-full-width: 1920px;
+$container-width: 1200px;
+$padding: 15px;
+

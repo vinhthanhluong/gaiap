@@ -1,0 +1,228 @@
+.account {
+
+    .columns {
+        justify-content: space-between;
+    }
+
+    .column {
+        &.account-info {
+            width: calc(100% / 12 * 3.3);
+            background-color: $g-F8F8-cl;
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
+        }
+
+        &.account-content {
+            width: calc(100% / 12 * 8);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 8.7);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
+        }
+    }
+
+    .account-content{
+        .account-inner{
+            padding: 85px 0px 60px;
+            @include max-media($bk-d-992){
+                padding: 65px 10px 40px;
+            }
+            @include max-media($bk-d-768){
+                padding: 20px 0px 40px;   
+            }
+        }
+    }
+
+    .account-inner {
+        // padding-top: 85px;
+        padding: 85px 20px 60px;
+        @include max-media($bk-d-992){
+            padding: 65px 10px 40px;
+        }
+        @include max-media($bk-d-768){
+            padding: 45px 10px 40px;   
+        }
+        .account-thumbnail {
+            display: flex;
+            align-items: center;
+            @include max-media($bk-d-1200){
+                flex-direction: column;
+            }
+
+            .account-img {
+                max-width: 90px;
+                border-radius: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .account-name {
+                padding-left: 20px;
+                font-weight: 600;
+                @include max-media($bk-d-1200){
+                    padding-left: 0px;
+                    padding-top: 10px;
+                }
+            }
+        }
+        .account-list {
+            margin-top: 50px;
+            @include max-media($bk-d-768){
+                margin-top: 20px;
+            }
+            .account-item {
+                border-bottom: 1px solid rgba($color: $g-7070-cl, $alpha: 0.2);
+                padding-bottom: 15px;
+                &:not(:first-child) {
+                    padding-top: 15px;
+                }
+            }
+
+            .account-p{
+                font-weight: 600;
+                @include fz-16;
+                @include lh(21,16);
+                position: relative;
+                transition: all .3s ease;
+                &::before{
+                    content: "\f105";
+                    font-family: 'Fontawesome';
+                    padding-right: 10px;
+                    color: $g-7070-cl;
+                }
+
+                &:hover{
+                    color: $main-cl;
+                }
+            }
+        }
+        .btn-account{
+            display: block;
+            color: $r2-cl;
+            @include fz-16;
+            font-weight: 600;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+    }
+
+    .account-title{
+        margin-bottom: 30px;
+        @include max-media($bk-d-768){
+            margin-bottom: 15px;
+        }
+    }
+
+    .order-table{
+        display: table;
+        width: 100%;
+
+        th{
+            text-align: left;
+            @include fz-16;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Oswald';
+            padding: 20px 0;
+            border-top:  1px solid rgba($color: $g-7070-cl, $alpha: 0.2);
+            border-bottom:  1px solid rgba($color: $g-7070-cl, $alpha: 0.2);
+        }
+        td{
+            padding: 15px 0;
+        }
+
+        tbody{
+            tr{
+                // &:not(:first-child){
+                //     border-top: 1px solid rgba($color: $g-7070-cl, $alpha: 0.2);
+                // }
+                border-bottom: 1px solid rgba($color: $g-7070-cl, $alpha: 0.2);
+            }
+        }
+    }
+    
+    .pagination{
+        margin-top: 30px;
+    }
+
+    .info-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .info-box{
+            width: 100%;
+            &:not(:last-child){
+                margin-bottom: 17px;
+                @include max-media($bk-d-992){
+                    margin-top: 15px;
+                }
+            }
+
+            // &:last-child{
+            //     margin-top: 25px;
+            // }
+
+            &.mt-25{
+                margin-top: 25px;
+                @include max-media($bk-d-992){
+                    margin-top: 20px;
+                }
+            }
+            &.mt-3{
+                margin-top: 5px;
+                
+            }
+
+            &.tl-right{
+                text-align: right;
+            }
+
+           
+            .info-label{
+                margin-bottom: 14px;
+            }
+
+            .f-control{
+                background-color: $g-F8F8-cl;
+                border-color: $g-E5E5-cl;
+                
+                &:hover , &:focus{
+                    border-color: $main-cl;
+                }
+            }
+
+            &.w-50{
+                width: calc(50% - 5px);
+            }
+        }
+
+        .select{
+            width: 100%;
+            background-image: url('../img/select-i.svg');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: auto;
+        }
+
+        .info-wrap{
+            width: 100%;
+        }
+
+        .info-title{
+            margin: 40px 0 30px;
+            @include max-media($bk-d-992){
+                margin: 30px 0 20px;
+            }
+        }
+
+        .f-submit{
+            border-radius: 6px;
+            max-width: 140px;
+            cursor: pointer;
+        }
+    }
+
+}

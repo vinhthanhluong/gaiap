@@ -1,0 +1,281 @@
+.title {
+    font-family: 'Oswald';
+    font-weight: 500;
+}
+
+
+
+.swiper-container {
+    .swiper-pagination {
+        bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+        margin: 0 6px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $main-cl;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.bd-b {
+    position: relative;
+
+    &::after {
+        content: "";
+        background-image: url("../img/border.png");
+        background-size: cover;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+    }
+}
+
+//popoup cloth
+.cloth-popup {
+    &.white-popup-block {
+        max-width: 1170px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .popup-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .popup-box {
+        &.popup-ig {
+            width: calc(100% / 12 *3);
+            @include max-media($bk-600){
+               width: 100%;
+            }
+        }
+
+        &.popup-txt {
+            width: calc(100% / 12 * 9);
+            @include max-media($bk-600){
+               width: 100%;
+            }
+        }
+    }
+
+    .popup-box {
+        &.popup-txt {
+            padding: 50px 60px 40px;
+            @include max-media($bk-d-1200){
+                padding: 40px;
+            }
+            @include max-media($bk-d-992){
+                padding: 30px;
+            }
+            @include max-media($bk-d-768){
+                padding: 20px;
+            }
+        }
+
+        .popup-img {
+            width: 100%;
+            height: 100%;
+            @include max-media($bk-600){
+                max-height: 200px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .popup-title {
+            margin-bottom: 15px;
+            @include max-media($bk-600){
+                margin-bottom: 10px
+            }
+        }
+
+        .popup-b {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .popup-f {
+                width: 100%;
+
+                &.w-50 {
+                    width: calc(50% - 5px);
+                    @include max-media($bk-600){
+                        width: 100%;
+                    }
+                }
+
+                &.w-170{
+                    max-width: 170px;
+                    margin-left: auto;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                    @include max-media($bk-600){
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .f-control {
+                border-color: $g-E5E5-cl;
+                background-color: $g-F8F8-cl;
+                border-radius: 6px;
+                margin-top: 14px;
+                transition: all .3s ease;
+                @include fz-16;
+                @include max-media($bk-600){
+                    margin-top: 7px;
+                }
+
+                &:hover , &:focus{
+                    border-color: $main-cl;
+                }
+            }
+
+            .f-submit{
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.post-slibar {
+    padding-left: 15px;
+    @include max-media($bk-d-992){
+        padding-left: 7.5px;
+    }
+    @include max-media($bk-d-768){
+        padding-left: 0;
+    }
+
+    .post-title {
+        margin-bottom: 17px;
+    }
+
+    .post-content {
+        border-bottom: 1px solid rgba($color: $g-7070-cl, $alpha: 0.1);
+        border-top: 1px solid rgba($color: $g-7070-cl, $alpha: 0.1);
+        padding: 20px 0;
+    }
+
+    .post-b {
+        align-items: center;
+        display: flex;
+        &:not(:first-child) {
+            padding-top: 15px;
+        }
+
+        &:hover {
+            .post-img {
+                a {
+                    &::before {
+                        @include visible;
+                    }
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .post-tt {
+                color: $main-cl;
+            }
+
+        }
+    }
+
+    .post-img {
+        a {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $bg-b-cl, $alpha: 0.5);
+                @include hidden;
+                z-index: 1;
+                transition: all .3s ease;
+            }
+
+            img {
+                transition: all .3s ease;
+                @include max-media($bk-900){
+                    max-width: 70px !important;
+                }
+                @include max-media($bk-d-768){
+                    max-width: none !important;
+                }
+            }
+        }
+    }
+
+    .post-info {
+        margin-left: 18px;
+        @include max-media($bk-d-992){
+            margin-left: 10px;
+        }
+
+        .post-tt {
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            transition: all .3s ease;
+        }
+
+        .post-code {
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .post-cd {
+            text-transform: uppercase;
+            color: rgba($color: $t-b-cl, $alpha: 0.6);
+        }
+
+    }
+
+    .btn-black {
+        margin-top: 20px;
+
+        &:hover {
+            letter-spacing: 1px !important;
+        }
+    }
+}
+
+.white-popup-block{
+    &.form-map{
+        max-width: 1170px;
+        padding: 0;
+
+        iframe{
+            width: 100%;
+            @include max-media($bk-576){
+                height: 300px;
+            }
+        }
+    }
+}
